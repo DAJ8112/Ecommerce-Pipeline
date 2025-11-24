@@ -26,7 +26,7 @@ This pipeline processes the theLook eCommerce dataset from BigQuery through four
 
 ## Architecture
 
-![Architecture](ecommerce_pipeline_architecture.svg)
+![Architecture](./images/architecture.png)
 
 **Data Flow:**
 ```
