@@ -11,7 +11,6 @@ End-to-end Big Data pipeline for processing e-commerce data using PySpark, Datap
 - [Automation Setup](#automation-setup)
 - [Visualization](#visualization)
 - [Troubleshooting](#troubleshooting)
-- [Cost Estimates](#cost-estimates)
 - [Cleanup](#cleanup)
 
 ## Project Overview
@@ -510,33 +509,6 @@ Or view in GCP Console:
 - Click on failed job
 - View logs and error messages
 
-## Cost Estimates
-
-| Service | Usage | Estimated Cost |
-|---------|-------|----------------|
-| Dataproc Serverless | 15-20 job runs during development | $10-15 |
-| Cloud Storage | ~2GB stored for 1 week | $0.50 |
-| BigQuery | Queries + storage | $2-5 |
-| Data Transfer | Minimal egress | $1-2 |
-| Cloud Scheduler | 1 scheduled job | $0.10/month |
-| **Total (one-time)** | | **$13-23** |
-| **Total (monthly if scheduled)** | | **$12-20** |
-
-**Cost Optimization Tips:**
-- Delete resources after project completion
-- Use single-node clusters for development
-- Set budget alerts at $15 and $25
-- Pause Cloud Scheduler when not needed
-- Monitor usage in Billing dashboard
-
-**Set Budget Alert:**
-```bash
-# Go to console.cloud.google.com
-# Navigate to Billing → Budgets & alerts
-# Create budget: $30
-# Set alerts at 50% ($15) and 80% ($24)
-```
-
 ## Cleanup
 
 **Important:** Delete all resources to avoid ongoing charges.
@@ -652,14 +624,3 @@ ecommerce-pipeline/
 - **Dataproc Workflow Templates** - Job orchestration
 - **Cloud Scheduler** - Automated scheduling
 - **Looker Studio** - Data visualization
-
-## Support
-
-For issues or questions:
-1. Check the [Troubleshooting](#troubleshooting) section
-2. Review GCP documentation links
-3. Check Dataproc job logs in GCP Console
-
-## License
-
-Educational project for Big Data Management coursework.
